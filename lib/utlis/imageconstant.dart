@@ -3,7 +3,7 @@ class ImageConstant {
   static String imagePath = 'assets/images';
 
   // Home images
-  static String imgSearch = '$imagePath/img_search.svg';
+
 
   // Recipe/Procedure images
   static String imgArrowRight = '$imagePath/img_arrow_right.svg';

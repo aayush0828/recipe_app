@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildHome(BuildContext context) {
   return Padding(
-    padding: EdgeInsets.only(left: 24, right: 24), // Added right padding
+    padding: EdgeInsets.symmetric(horizontal: 24), // Use symmetric padding
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
         ),
         SizedBox(height: 19),
         Container(
-          width: double.infinity, // Make the container take the full width
+          width: double.infinity,
           padding: EdgeInsets.symmetric(
             horizontal: 30,
             vertical: 13,
@@ -57,61 +57,53 @@ class HomeScreen extends StatelessWidget {
         ),
         SizedBox(height: 11),
         Row(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  children: [
-    Expanded(
-      child: Stack(
-        alignment: Alignment.centerLeft,
-        children: [
-          Align(
-            alignment: Alignment.center,
-            child: Text(
-              "Category",
-              style: theme.textTheme.titleLarge,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Stack(
+                alignment: Alignment.centerLeft,
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Category",
+                      style: theme.textTheme.titleLarge,
+                    ),
+                  ),
+                  CustomImageView(
+                    height: 31,
+                    width: 24,
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.only(left: 10),
+                  ),
+                ],
+              ),
             ),
-          ),
-          CustomImageView(
-            imagePath: ImageConstant.imgSearch,
-            height: 31,
-            width: 24,
-            alignment: Alignment.centerLeft,
-            margin: EdgeInsets.only(left: 10),
-          ),
-        ],
-      ),
-    ),
-    Padding(
-      padding: EdgeInsets.only(
-        top: 6,
-        bottom: 4,
-      ),
-      child: Text(
-        "View all",
-        style: CustomTextStyles.titleSmallBluegray700,
-      ),
-    ),
-  ],
-),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 6,
+                bottom: 4,
+              ),
+              child: Text(
+                "View all",
+                style: CustomTextStyles.titleSmallBluegray700,
+              ),
+            ),
+          ],
+        ),
         SizedBox(height: 7),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: IntrinsicWidth(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Wrap(
-                  runSpacing: 21,
-                  spacing: 21,
-                  children: List<Widget>.generate(3, (index) => FiveItemWidget()),
-                ),
-                
-              ],
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: List<Widget>.generate(
+              3,
+              (index) => FiveItemWidget(),
             ),
           ),
         ),
       ],
     ),
   );
-}
-}
+}}

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // ignore: unused_import
 import 'package:flutter/scheduler.dart';
-import 'package:recipe_app/routes/approutes.dart';
+import 'package:recipe_app/splashscreen.dart';
 import 'package:recipe_app/themes/themehelper.dart';
 
 
@@ -24,8 +24,7 @@ class MyApp extends StatelessWidget {
       theme: theme,
       title: 'Recipe App',
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.recipeIngridentScreen,
-      routes: AppRoutes.routes,
-    );
+      home: SplashScreen());
   }
 }
+    
