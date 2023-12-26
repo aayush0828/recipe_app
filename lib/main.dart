@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // ignore: unused_import
 import 'package:flutter/scheduler.dart';
 import 'package:recipe_app/splashscreen.dart';
 import 'package:recipe_app/themes/themehelper.dart';
 
-
+   
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
