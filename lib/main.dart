@@ -10,7 +10,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
-  ]);
+  ]);   
 
   ///Please update theme as per your need if required.
   ThemeHelper().changeTheme('primary');
