@@ -10,6 +10,6 @@ Widget build(BuildContext context) {
 return AnimatedSplashScreen( 
   splash: Lottie.asset('recipe_app/animations/1.json'),
   
-  splashIconSize: 250,
+  splashIconSize: 250,    
   backgroundColor: Colors.white,
   nextScreen: HomeScreen());}}
