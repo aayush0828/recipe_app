@@ -5,7 +5,7 @@ import 'package:recipe_app/homescreen/homescreen.dart';
 
 class SplashScreen extends StatelessWidget { 
   const SplashScreen({Key? key}): super(key: key); 
-  @override    
+  @override       
 Widget build(BuildContext context) {
 return AnimatedSplashScreen( 
   splash: Lottie.asset('recipe_app/animations/1.json'),
